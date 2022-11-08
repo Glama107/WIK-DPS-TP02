@@ -1,5 +1,6 @@
-FROM node:18
-WORKDIR /app
+FROM node
+WORKDIR /Users/guillaume/Downloads/DevOps
 COPY . .
+EXPOSE 8080
 RUN npx tsc
-CMD ["npm","start"]
+CMD node ./build/index.js
